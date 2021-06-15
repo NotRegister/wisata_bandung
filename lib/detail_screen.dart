@@ -24,7 +24,9 @@ class _DetailScreenState extends State<DetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Stack(children: [
-              Image.asset(widget.place.imageAsset),
+              Hero(
+                  tag: "imageAssets",
+                  child: Image.asset(widget.place.imageAsset)),
               SafeArea(
                   child: Padding(
                 padding: const EdgeInsets.all(8.0),

@@ -34,12 +34,15 @@ class MainScreen extends StatelessWidget {
                     Expanded(
                       //* Gambar
                       flex: 1,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20)),
-                        child: Image.asset(
-                          place.imageAsset,
+                      child: Hero(
+                        tag: "imageAsset",
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)),
+                          child: Image.asset(
+                            place.imageAsset,
+                          ),
                         ),
                       ),
                     ),
