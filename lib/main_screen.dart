@@ -32,15 +32,22 @@ class MainScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
+                      //* Gambar
                       flex: 1,
-                      child: Image.asset(
-                        place.imageAsset,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomLeft: Radius.circular(20)),
+                        child: Image.asset(
+                          place.imageAsset,
+                        ),
                       ),
                     ),
                     Expanded(
+                      //* Judul dan lokasi
                       flex: 2,
                       child: Padding(
-                        padding: EdgeInsets.all(8),
+                        padding: EdgeInsets.fromLTRB(15, 8, 8, 8),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,

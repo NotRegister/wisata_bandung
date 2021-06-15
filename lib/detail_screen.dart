@@ -129,7 +129,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   scrollDirection: Axis.horizontal,
                   children: widget.place.imageUrls.map((url) {
                     return ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
                       child: Padding(
                         padding: EdgeInsets.all(4),
                         child: Image.network(url),
